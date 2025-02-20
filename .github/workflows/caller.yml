@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   call-workflow:
@@ -15,6 +19,4 @@ jobs:
       pull-requests: write
     uses: ./.github/workflows/workflow-B.yml@main
     with:
-      config-path: .github/labeler.yml
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+      script: "Hello world!"
