@@ -11,7 +11,7 @@ on:
 
 jobs:
   call-workflow:
-    uses: ./.github/workflows/workflow-A.yml@v1
+    uses: ./.github/workflows/workflow-A.yml
 
   call-workflow-passing-data:
     permissions:
